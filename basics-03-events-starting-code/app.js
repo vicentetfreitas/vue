@@ -8,9 +8,15 @@ const app = Vue.createApp({
     add() {
       this.counter++;
     },
-    remove(){
+    remove() {
       this.counter--;
-    }
+    },
+    addNum(num) {
+      this.counter = this.counter + num;
+    },
+    removeNum(num) {
+      this.counter = this.counter - num;
+    },
   },
 });
 
