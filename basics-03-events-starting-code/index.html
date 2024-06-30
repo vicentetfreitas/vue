@@ -23,6 +23,7 @@
     <br>
     <button v-on:click="addNum(10)">Add 10</button>
     <button v-on:click="removeNum(10)">Remove 10</button>
+    <p v-once>Starting Counter: {{ counter }}</p>
     <p>Result: {{ counter }}</p>
     <input type="text" v-on:input="setYourName($event, 'Freitas')" v-on:keyup.enter="confirmInput">
     <p>Your Name: {{yourName }}</p>
