@@ -24,10 +24,13 @@
     <button v-on:click="addNum(10)">Add 10</button>
     <button v-on:click="removeNum(10)">Remove 10</button>
     <p>Result: {{ counter }}</p>
-    <br>
-    <br>
-    <input type="text" v-on:input="setYourName($event, 'Freitas')">
+    <input type="text" v-on:input="setYourName($event, 'Freitas')" v-on:keyup.enter="confirmInput">
     <p>Your Name: {{yourName }}</p>
+    <p>Your Confirmed Your Name - ENTER: {{confirmedName }}</p>
+    <form v-on:submit.prevent="submitForm">
+      <input type="text">
+      <button>Sing Up</button>
+    </form>
   </section>
 </body>
 
